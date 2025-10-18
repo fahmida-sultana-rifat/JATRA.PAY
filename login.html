@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - JATRA.PAY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">JATRA.PAY</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <section class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
+      <ul class="nav nav-tabs mb-4" id="authTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button">Login</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button">Sign Up</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="authTabsContent">
+        <!-- Login Form -->
+        <div class="tab-pane fade show active" id="login" role="tabpanel">
+          <h4 class="text-center mb-3">Driver Login</h4>
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Driver ID</label>
+              <input type="text" class="form-control" id="driverId" placeholder="Enter Driver ID" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+
+        <!-- Sign-up Form -->
+        <div class="tab-pane fade" id="signup" role="tabpanel">
+          <h4 class="text-center mb-3">Driver Sign Up</h4>
+          <form id="signupForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter Full Name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Driver ID</label>
+              <input type="text" class="form-control" id="newDriverId" placeholder="Create Driver ID" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" id="newPassword" placeholder="Create Password" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="fw-bold mb-2">Take Payment Via</p>
+        <button class="btn btn-warning me-2">USSD</button>
+        <button class="btn btn-secondary">QR Scanner</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <p class="mb-0">&copy; 2025 JATRA.PAY. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
